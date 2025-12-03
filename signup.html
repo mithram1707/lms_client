@@ -3,28 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - LMS</title>
+    <title>Sign Up - Ani Watch</title>
     <link rel="stylesheet" href="index.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h2>Sign Up</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" required>
-            
+    <div class="signup-container">
+        <h2>Sign Up for Ani Watch</h2>
+        <form class="signup-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
             <button type="submit">Sign Up</button>
         </form>
-        <div class="signup-text">
-            Already have an account? <a href="login.html">Login here</a>
-        </div>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+        <a href="index.html">Back to Home</a>
     </div>
 </body>
 </html>
