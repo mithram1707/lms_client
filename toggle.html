@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Theme</title>
+    <link rel="stylesheet" href="toggle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Toggle Theme</h1>
+        <div class="theme-section">
+            <span class="mode-label">Dark Mode</span>
+            <div class="toggle-switch" onclick="toggleTheme()">
+                <div class="toggle-slider"></div>
+            </div>
+            <span class="mode-label">Light Mode</span>
+        </div>
+        <div class="box" id="themeBox"></div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const box = document.getElementById('themeBox');
+            const toggle = document.querySelector('.toggle-switch');
+            const body = document.body;
+            
+            box.classList.toggle('light');
+            toggle.classList.toggle('active');
+            body.classList.toggle('light-theme');
+        }
+    </script>
+</body>
+</html>

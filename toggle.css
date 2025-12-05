@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #1a1a1a;
+    transition: background 0.5s ease;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
+    transition: color 0.5s ease;
+}
+
+.theme-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.mode-label {
+    font-size: 14px;
+    color: #ccc;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+
+.toggle-switch {
+    width: 60px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: background 0.3s ease;
+}
+
+.toggle-slider {
+    width: 26px;
+    height: 26px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.box {
+    height: 100px;
+    width: 150px;
+    background-color: #333;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.box::after {
+    content: 'Dark Mode';
+}
+
+.box.light {
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid #ddd;
+    color: #333;
+}
+
+.box.light::after {
+    content: 'Light Mode';
+}
+
+body.light-theme {
+    background: #f8f9fa;
+}
+
+body.light-theme h1 {
+    color: #333;
+}
+
+body.light-theme .mode-label {
+    color: #666;
+}
+
+.toggle-switch.active {
+    background: #4CAF50;
+}
+
+.toggle-switch.active .toggle-slider {
+    transform: translateX(30px);
+}
